@@ -76,6 +76,33 @@ async function borrarUltimo(){
     }
 }
 
+async function editarComentario(){
+    let usuario=document.querySelector("#usuario").value;
+    let fecha=document.querySelector("#fecha").value;
+    let comentarioinput=document.querySelector("#comentarioinput").value;
+
+    let comentarios={
+        "usuario": usuario,
+        "fecha": fecha,
+        "comentario":comentarioinput,
+    }
+
+    try{
+        let respuesta=await fetch(`${url}/${id}`, {
+            "method":"PUT",
+            "headers": {"Content-type":"application/json"},
+            "body":JSON.stringify(comentarios)
+        });
+        if (respuesta.status===200){
+            document.querySelector("#mensaje").innerHTML="Comentario Editado."
+        }
+
+    }catch(error){
+        console.log(error);
+    }    
+}
+
 document.querySelector("#btn-borrar").addEventListener("click",borrarUltimo);
 document.querySelector("#btn-publicar").addEventListener("click", subircomentario);
+document.querySelector("#btn-editar").addEventListener("click", editarComentario);
 recibirComentarios();
