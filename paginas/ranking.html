@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ranking: Mejores Postres</title>
-    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     <header id="header">
@@ -14,13 +14,13 @@
             </svg></button>
             
             <div class="contenedor-logo">
-                <img class="torta-logo" src="/imagenes/pastel.png" alt="">
+                <img class="torta-logo" src="../imagenes/pastel.png" alt="">
                 <h1 class="logo"><a href="/index.html"> Pasteles María</a></h1>
             </div>
         <div id="contenedor-nav" class="contenedor-nav">
             <ul>
-                <li><a href="/index.html">INICIO</a></li>
-                <li><a href="/paginas/contacto.html">CONTACTO</a></li>
+                <li><a href="..index.html">INICIO</a></li>
+                <li><a href="contacto.html">CONTACTO</a></li>
                 <li id="modoOscuro">CAMBIAR <span id="modo">MODO</span></li>
             </ul>
         </div>
@@ -34,17 +34,17 @@
                 <th>Puntuación</th>
             </thead>
             <tr>
-                <td><img src="/imagenes/torta-matilda.jpeg" alt=""></td>
+                <td><img src="../imagenes/torta-matilda.jpeg" alt=""></td>
                 <td>Torta Matilda</td>
                 <td>9.5</td>
             </tr>
             <tr>
-                <td><img src="/imagenes/tarta.jpeg" alt=""></td>
+                <td><img src="../imagenes/tarta.jpeg" alt=""></td>
                 <td>Tarta de Frutos Rojos</td>
                 <td>7.5</td>
             </tr>
             <tr>
-                <td><img src="/imagenes/torta-roja.jpeg" alt=""></td>
+                <td><img src="../imagenes/torta-roja.jpeg" alt=""></td>
                 <td>Torta de Frutilla</td>
                 <td>10</td>
             </tr>
@@ -54,20 +54,26 @@
     <section>
         <h1>COMENTARIOS</h1>
         Agrega tu Comentario
-        <form>
+        <form id="form" class="form_comentarios">
             <label for="usuario">Usuario</label>
             <input type="text" name="usuario" id="usuario" required>
             <label for="fecha">Fecha</label>
             <input type="date" name="fecha" id="fecha" required>
             <label for="comentario">Comenta!</label>
-            <textarea name="comentario" id="comentario" maxlength="250" cols="40" rows="7" required></textarea>
+            <textarea name="comentario" id="comentarioinput" maxlength="250" cols="40" rows="7" required></textarea>
             <button id="btn-publicar">Publicar</button>
+            <p id="mensaje"></p>
         </form>
+        
+        <ul class="comentariosausejax" id="comentariosausejax">
+           
+        </ul>
+        <button id="btn-borrar" value="Borrar">BORRAR COMENTARIO</button>
     </section>
 
     <aside>
         <div class="contenedorPublicidad">
-            <img src="/imagenes/chef.jpeg" alt="">
+            <img src="../imagenes/chef.jpeg" alt="">
             <h2>COMPRA MI CURSO</h2>
             <h3>Tan solo por esta semana <span class="span-publicidad">30% OFF</span></h3>
             <button class="boton-publicidad">COMPRAR$$$</button>
@@ -76,6 +82,7 @@
     
     <footer>2024, Pasteles María</footer>
 
-    <script src="/js/codigo.js"></script>
+   
+    <script src="../js/comentarios.js"></script>
 </body>
 </html>
