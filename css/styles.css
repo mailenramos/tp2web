@@ -1,0 +1,330 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
+
+body {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+    margin: 0;
+    min-height: 100vh;
+}
+
+header {
+    display: flex;
+    background-color: rgb(217, 48, 186);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    grid-area: header;
+    align-items: center;
+    padding: 10px 15px;
+}
+
+.logo {
+    font-size: 25px;
+    padding-left: 5px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.contenedor-logo {
+    display: flex;
+    justify-content: center;
+}
+
+aside {
+    background-color: rgb(226, 131, 241);
+    grid-area: aside;
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    padding: 20px 0;
+    text-align: center;
+    background-color: rgb(51, 51, 51);
+    color: white;
+    grid-area: footer;
+    align-self: flex-end;
+}
+
+.boton-menu {
+    background-color: blanchedalmond;
+    box-shadow: 2px 2px gray;
+    height: 40px;
+}
+
+.contenedor-nav {
+    display: none;
+}
+
+.contenedor-nav.desplegado {
+    display: flex;
+}
+
+.contenedor-nav li {
+    margin: 3px;
+}
+
+.seccion-recetas {
+    grid-area: main;
+}
+
+img {
+    width: 80%;
+}
+
+.torta-logo {
+    width: 35px;
+    height: 45px;
+}
+
+.ingredientes {
+    margin: 10px;
+}
+
+li {
+    border: 1px solid rgb(232, 226, 226);
+    list-style: none;
+}
+li a{
+    text-decoration: none;
+}
+
+header li {
+    color: rgb(221, 0, 255);
+    background-color: aliceblue;
+    font-weight: bold;
+}
+
+.lista-ingredientes li {
+    list-style: circle;
+    border: none;
+}
+
+.tarjeta {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(236, 218, 218);
+    border: 15px solid white;
+}
+
+.tarjeta button {
+    border-radius: 10px;
+    border: solid 0.5px black;
+    height: 30px;
+    box-shadow: 1px 1px grey;
+    margin-bottom: 10px;
+    background-color: beige;
+    color: white;
+    font-weight: bold;
+}
+
+.tarjeta h2 {
+    padding-left: 5px;
+    background-color: bisque;
+}
+
+.iframe {
+    padding-bottom: 20px;
+}
+
+.contenedorPublicidad {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 30px;
+    color: white;
+}
+.contenedorPublicidad img{
+    box-shadow: 2px 2px 1px 0px black;
+    border-radius: 10px;
+}
+.contenedorPublicidad h3{
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+}
+.span-publicidad{
+    font-size: 30px;
+    font-weight: bolder;
+    color: red;
+}
+
+.contenedorPublicidad h2 {
+    font-family: "Poetsen One", sans-serif;
+    color: white;
+    text-decoration: underline;
+}
+
+.boton-publicidad {
+    background-color: rgb(57, 185, 6);
+    font-size: 1.5em;
+    border-radius: 15px;
+    color: white;
+    font-weight: bolder;
+    padding: 5px;
+}
+
+.seccion-formulario {
+    display: flex;
+    justify-content: center;
+    grid-area: main;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    height: 380px;
+    margin: 10px 0;
+    box-shadow: 0 0 2px 2px grey;
+    text-align: center;
+}
+
+.formulario button {
+    margin-top: 5px;
+    border-radius: 10px;
+    width: 100px;
+    height: 30px;
+    color: white;
+    font-weight: 800;
+    background-color: rgb(255, 103, 242);
+}
+
+.formulario h1 {
+    font-size: 1.5em;
+    color: rgb(103, 102, 102);
+}
+
+.captcha {
+    font-size: 25px;
+    background-color: rgb(235, 235, 101);
+}
+
+h2.captcha {
+    margin: 10px 0;
+}
+
+select {
+    margin-top: 10px;
+}
+
+input {
+    border-radius: 5px;
+}
+
+label {
+    padding: 5px 0;
+}
+
+.ranking img {
+    width: 150px;
+}
+
+table {
+    text-align: center;
+}
+
+th {
+    background-color: rgb(179, 116, 238);
+    color: white;
+}
+
+table, td, tr {
+    border: solid 1px black;
+}
+
+h2 {
+    color: rgba(152, 51, 168);
+}
+
+.modoOscuro body {
+    background-color: grey;
+}
+
+.modoOscuro header, .modoOscuro footer {
+    background-color: rgb(79, 79, 79);
+}
+
+.modoOscuro aside {
+    background-color: rgb(125, 125, 125);
+}
+
+@media only screen and (min-width: 660px) {
+    body {
+        display: grid;
+        grid-template-columns: 60% 40%;
+        grid-template-areas:
+            "header header"
+            "main aside"
+            "footer footer";
+    }
+
+    .boton-menu {
+        display: none;
+    }
+
+    .contenedor-nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .tarjeta {
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+    }
+
+    .tarjeta img, .tarjeta .iframe {
+        width: 70%;
+        margin: 10px;
+    }
+
+    .ingredientes {
+        width: 50%;
+        padding: 10px;
+    }
+
+    .seccion-formulario {
+        display: flex;
+        align-items: center;
+    }
+
+    .formulario {
+        width: 50%;
+        height: 55%;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px;
+    }
+
+    section.ranking {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    section table {
+        width: 90%;
+        height: 90%;
+    }
+
+    table img {
+        border: 1px solid rgb(113, 113, 113);
+        box-shadow: 1px 1px 1px 1px;
+        border-radius: 10px;
+    }
+}
