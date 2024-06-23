@@ -447,6 +447,9 @@ h2 {
 .form_comentarios button:hover {
     background-color: rgb(187, 35, 149);
 }
+.selected{
+    background-color: rgb(169, 233, 241);
+}
 
 #editar-form {
     margin: 20px auto;
