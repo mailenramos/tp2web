@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&display=swap');
-
 body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
-    grid-template-rows:1fr;
-
+    grid-template-rows:auto auto auto;
     grid-template-areas:
         "header"
         "main"
@@ -13,7 +10,19 @@ body {
         "sectionComentarios"
         "footer";
     min-height: 100vh;
-
+    margin: 0;
+}
+.bodyIndex {
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    display: grid;
+    grid-template-rows:auto auto auto auto;
+    grid-template-areas:
+        "header"
+        "main"
+        "aside"
+        "footer";
+    min-height: 100vh;
     margin: 0;
 }
 
@@ -42,13 +51,13 @@ header {
 }
 
 aside {
-    background-color: rgb(226, 131, 241);
     grid-area: aside;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
     padding: 10px;
 }
+
 
 footer {
     text-align: center;
@@ -76,13 +85,49 @@ footer {
     margin: 3px;
 }
 
+
 .seccion-recetas {
     grid-area: main;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+.tarjeta {
+    background-color: rgb(236, 218, 218);
+    border: 1px solid black;
+    margin-bottom: 20px;
+    display: flex;
+    border-radius: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjeta button {
+    border-radius: 10px;
+    border: solid 0.5px black;
+    height: 30px;
+    box-shadow: 1px 1px grey;
+    margin-bottom: 10px;
+    background-color: beige;
+    color: white;
+    font-weight: bold;
+}
+
+.tarjeta h2 {
+    padding: 10px;
+    background-color: bisque;
+}
+
+.iframe {
+    width: 100%;
+    padding-bottom: 20px;
 }
 
 img {
-    max-width: 100%; /* Ajuste para imágenes responsivas */
-    height: auto; /* Ajuste para imágenes responsivas */
+    max-width: 100%;
+    height: auto;
 }
 
 .torta-logo {
@@ -114,46 +159,26 @@ header li {
     border: none;
 }
 
-.tarjeta {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(236, 218, 218);
-    border: 15px solid white;
-}
 
-.tarjeta button {
-    border-radius: 10px;
-    border: solid 0.5px black;
-    height: 30px;
-    box-shadow: 1px 1px grey;
-    margin-bottom: 10px;
-    background-color: beige;
-    color: white;
-    font-weight: bold;
-}
 
-.tarjeta h2 {
-    padding-left: 5px;
-    background-color: bisque;
-}
-
-.iframe {
-    padding-bottom: 20px;
+.fixed-aside {
+    position: sticky;
+    top: 0px;
+    align-self:flex-start;
 }
 
 .contenedorPublicidad {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding: 10px 30px;
     color: white;
+    margin-top: 8px;
 }
 
 .contenedorPublicidad img {
-    box-shadow: 2px 2px 1px 0px black;
+    width: 100%;
+    max-width: 220px;
     border-radius: 10px;
 }
 
@@ -164,14 +189,14 @@ header li {
 }
 
 .span-publicidad {
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bolder;
     color: red;
 }
 
 .contenedorPublicidad h2 {
     font-family: "Poetsen One", sans-serif;
-    color: white;
+    margin: 0;
     text-decoration: underline;
 }
 
@@ -181,7 +206,8 @@ header li {
     border-radius: 15px;
     color: white;
     font-weight: bolder;
-    padding: 5px;
+    padding: 5px 20px;
+    margin-top: 10px;
 }
 
 .seccion-formulario {
@@ -194,25 +220,28 @@ header li {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 250px;
-    height: 380px;
+    width: 60%;
+    padding: 10px 0px;
     margin: 10px 0;
     box-shadow: 0 0 2px 2px grey;
     text-align: center;
 }
-
-.formulario button {
-    margin-top: 5px;
+.formulario input{
+    width: 80%;
+}
+#boton-formulario {
+    margin: 5px 0px;
     border-radius: 10px;
-    width: 100px;
     height: 30px;
     color: white;
-    font-weight: 800;
+    width: 35%;
+    font-weight: bold;
     background-color: rgb(255, 103, 242);
 }
 
 .formulario h1 {
-    font-size: 1.5em;
+    font-size: 1.3em;
+    margin: 4px;
     color: rgb(103, 102, 102);
 }
 
@@ -479,10 +508,22 @@ h2 {
     body {
         display: grid;
         grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto auto;
         grid-template-areas:
             "header header"
             "main aside"
             "sectionComentarios sectionComentarios"
+            "footer footer";
+    }
+    .bodyIndex {
+        background-color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        display: grid;
+        grid-template-rows:auto auto auto;
+        grid-template-areas:
+            "header header"
+            "main aside"
+            "main aside"
             "footer footer";
     }
 
@@ -495,12 +536,16 @@ h2 {
         flex-direction: column;
         width: 90%;
         margin: 0 auto;
-        display: flex;
     }
 
-    .tarjeta img, .tarjeta .iframe {
-        width: 70%;
-        margin: 10px;
+
+    .tarjeta h2 {
+        width: 90%;
+    }
+
+    .iframe {
+        width: 90%;
+        margin: 0 auto;
     }
 
     .ingredientes {
@@ -513,17 +558,10 @@ h2 {
         align-items: center;
     }
 
-    .formulario {
-        width: 50%;
-        height: auto; /* Cambiado para ajuste automático */
-        display: flex;
-        justify-content: center;
-        border-radius: 8px;
-    }
 
     .formulario button {
-        width: 100%; /* Cambiado para ocupar el ancho */
-        height: auto; /* Cambiado para ajuste automático */
+        width: 100%;
+        height: auto;
     }
 
     .ranking {
