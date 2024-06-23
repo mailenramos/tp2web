@@ -65,12 +65,23 @@
             <p id="mensaje"></p>
         </form>
         
-        <ul class="comentariosausejax" id="comentariosausejax">
+        <ul id="comentarios-lista" class="comentarios-lista">
            
         </ul>
-        <button id="btn-borrar" value="Borrar">BORRAR COMENTARIO</button>
-        <button id="btn-editar" value="Editar">EDITAR COMENTARIO</button>
     </section>
+
+    <div id="editar-form" style="display: none;">
+        <h2>Editar Comentario</h2>
+        <form id="editar-formulario">
+            <label for="usuario-editar">Usuario</label>
+            <input type="text" name="usuario" id="usuario-editar" required>
+            <label for="fecha-editar">Fecha</label>
+            <input type="date" name="fecha" id="fecha-editar" required>
+            <label for="comentario-editar">Comentario</label>
+            <textarea name="comentario" id="comentario-editar" maxlength="250" cols="40" rows="7" required></textarea>
+            <button id="btn-guardar">Guardar</button>
+        </form>
+    </div>
 
     <aside>
         <div class="contenedorPublicidad">
