@@ -4,23 +4,26 @@ body {
     background-color: white;
     font-family: Arial, Helvetica, sans-serif;
     display: grid;
+    grid-template-rows:1fr;
+
     grid-template-areas:
         "header"
         "main"
         "aside"
+        "sectionComentarios"
         "footer";
-    margin: 0;
     min-height: 100vh;
+
+    margin: 0;
 }
 
 header {
     display: flex;
-    background-color: rgb(217, 48, 186);
     justify-content: space-between;
-    flex-wrap: wrap;
-    grid-area: header;
     align-items: center;
+    background-color: rgb(217, 48, 186);
     padding: 10px 15px;
+    grid-area: header;
 }
 
 .logo {
@@ -44,15 +47,15 @@ aside {
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
 footer {
-    padding: 20px 0;
     text-align: center;
     background-color: rgb(51, 51, 51);
     color: white;
+    padding: 20px 0;
     grid-area: footer;
-    align-self: flex-end;
 }
 
 .boton-menu {
@@ -78,7 +81,8 @@ footer {
 }
 
 img {
-    width: 80%;
+    max-width: 100%; /* Ajuste para imágenes responsivas */
+    height: auto; /* Ajuste para imágenes responsivas */
 }
 
 .torta-logo {
@@ -94,7 +98,8 @@ li {
     border: 1px solid rgb(232, 226, 226);
     list-style: none;
 }
-li a{
+
+li a {
     text-decoration: none;
 }
 
@@ -146,16 +151,19 @@ header li {
     padding: 10px 30px;
     color: white;
 }
-.contenedorPublicidad img{
+
+.contenedorPublicidad img {
     box-shadow: 2px 2px 1px 0px black;
     border-radius: 10px;
 }
-.contenedorPublicidad h3{
+
+.contenedorPublicidad h3 {
     background-color: white;
     color: black;
     border-radius: 5px;
 }
-.span-publicidad{
+
+.span-publicidad {
     font-size: 30px;
     font-weight: bolder;
     color: red;
@@ -223,10 +231,24 @@ select {
 
 input {
     border-radius: 5px;
+    width: 100%; /* Ajuste para evitar desbordamientos en inputs */
+    box-sizing: border-box; /* Ajuste para incluir el padding en el ancho */
 }
 
 label {
     padding: 5px 0;
+}
+.ranking {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; /* Añadido para espacio interno */
+}
+
+.ranking table {
+    width: 100%;
+    max-width: 800px; 
+    margin-top: 20px;
 }
 
 .ranking img {
@@ -235,15 +257,22 @@ label {
 
 table {
     text-align: center;
+    width: 100%;
+    border-collapse: collapse;
 }
 
 th {
     background-color: rgb(179, 116, 238);
     color: white;
+    padding: 10px;
 }
 
 table, td, tr {
     border: solid 1px black;
+}
+
+td, th {
+    padding: 10px;
 }
 
 h2 {
@@ -260,6 +289,23 @@ h2 {
 
 .modoOscuro aside {
     background-color: rgb(125, 125, 125);
+}
+
+.sectionComentarios {
+    grid-area: sectionComentarios;
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.comentarios {
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.comentarios h1, .comentarios h2 {
+    color: rgb(217, 48, 186);
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .comentarios form {
@@ -298,7 +344,6 @@ h2 {
     background-color: rgb(187, 35, 149);
 }
 
-/* Estilos para la lista de comentarios */
 .comentarios-lista {
     padding: 0;
 }
@@ -350,6 +395,7 @@ h2 {
     font-size: 16px;
     font-family: 'Arial', sans-serif;
     background-color: #fff;
+    box-sizing: border-box; /* Incluir padding en el ancho */
 }
 
 .form_comentarios textarea {
@@ -373,6 +419,62 @@ h2 {
     background-color: rgb(187, 35, 149);
 }
 
+#editar-form {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f4f4f4;
+    max-width: 600px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#editar-form h2 {
+    text-align: center;
+    color: rgb(217, 48, 186);
+    margin-bottom: 10px;
+}
+
+#editar-form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+#editar-form input,
+#editar-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+}
+
+#editar-form textarea {
+    resize: vertical;
+}
+
+#editar-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(217, 48, 186);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#editar-form button:hover {
+    background-color: rgb(187, 35, 149);
+}
+
 @media only screen and (min-width: 660px) {
     body {
         display: grid;
@@ -380,11 +482,8 @@ h2 {
         grid-template-areas:
             "header header"
             "main aside"
+            "sectionComentarios sectionComentarios"
             "footer footer";
-    }
-
-    .boton-menu {
-        display: none;
     }
 
     .contenedor-nav {
@@ -416,27 +515,28 @@ h2 {
 
     .formulario {
         width: 50%;
-        height: 55%;
+        height: auto; /* Cambiado para ajuste automático */
         display: flex;
         justify-content: center;
         border-radius: 8px;
     }
 
-    section.ranking {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .formulario button {
+        width: 100%; /* Cambiado para ocupar el ancho */
+        height: auto; /* Cambiado para ajuste automático */
     }
 
-    section table {
-        width: 90%;
-        height: 90%;
+    .ranking {
+        justify-content: flex-start; /* Alinear contenido al inicio */
     }
 
-    table img {
-        border: 1px solid rgb(113, 113, 113);
-        box-shadow: 1px 1px 1px 1px;
-        border-radius: 10px;
+    .ranking table {
+        width: 90%; /* Reducir el ancho en pantallas grandes */
+        margin-top: 0; /* Eliminar espacio superior */
+    }
+
+    .sectionComentarios {
+        padding: 20px; /* Añadido para espacio interno */
     }
 
     .comentarios form {
@@ -452,18 +552,4 @@ h2 {
     .comentarioLi {
         padding: 10px;
     }
-
-    .form_comentarios {
-        padding: 15px;
-    }
-
-    .form_comentarios input,
-    .form_comentarios textarea {
-        padding: 8px;
-    }
-
-    .form_comentarios button {
-        padding: 10px 15px;
-    }
 }
-
