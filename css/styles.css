@@ -1,38 +1,12 @@
-body {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-rows:auto auto auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "aside"
-        "sectionComentarios"
-        "footer";
-    min-height: 100vh;
+body{
     margin: 0;
 }
-.bodyIndex {
-    background-color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    display: grid;
-    grid-template-rows:auto auto auto auto;
-    grid-template-areas:
-        "header"
-        "main"
-        "aside"
-        "footer";
-    min-height: 100vh;
-    margin: 0;
-}
-
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: rgb(217, 48, 186);
     padding: 10px 15px;
-    grid-area: header;
 }
 
 .logo {
@@ -51,7 +25,6 @@ header {
 }
 
 aside {
-    grid-area: aside;
     flex-wrap: wrap;
     display: flex;
     flex-direction: column;
@@ -64,7 +37,6 @@ footer {
     background-color: rgb(51, 51, 51);
     color: white;
     padding: 20px 0;
-    grid-area: footer;
 }
 
 .boton-menu {
@@ -84,15 +56,26 @@ footer {
 .contenedor-nav li {
     margin: 3px;
 }
-
-
+.bodyInicio{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "seccionRecetas"
+    "asideInicio";
+}
+.asideInicio{
+    grid-area: asideInicio;
+    position: sticky;
+    top: 0px;
+    align-self:flex-start;
+}
 .seccion-recetas {
-    grid-area: main;
     display: flex;
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
     padding: 20px;
+    grid-area: seccionRecetas;
 }
 .tarjeta {
     background-color: rgb(236, 218, 218);
@@ -213,7 +196,6 @@ header li {
 .seccion-formulario {
     display: flex;
     justify-content: center;
-    grid-area: main;
 }
 
 .formulario {
@@ -321,7 +303,6 @@ h2 {
 }
 
 .sectionComentarios {
-    grid-area: sectionComentarios;
     background-color: #f4f4f4;
     padding: 20px;
 }
@@ -508,28 +489,11 @@ h2 {
 }
 
 @media only screen and (min-width: 660px) {
-    body {
-        display: grid;
+    .bodyInicio{
         grid-template-columns: 60% 40%;
-        grid-template-rows: auto auto auto;
-        grid-template-areas:
-            "header header"
-            "main aside"
-            "sectionComentarios sectionComentarios"
-            "footer footer";
+        grid-template-areas: 
+        "seccionRecetas asideInicio";
     }
-    .bodyIndex {
-        background-color: white;
-        font-family: Arial, Helvetica, sans-serif;
-        display: grid;
-        grid-template-rows:auto auto auto;
-        grid-template-areas:
-            "header header"
-            "main aside"
-            "main aside"
-            "footer footer";
-    }
-
     .contenedor-nav {
         display: flex;
         flex-wrap: wrap;
