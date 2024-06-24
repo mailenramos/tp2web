@@ -69,6 +69,19 @@ footer {
     top: 0px;
     align-self:flex-start;
 }
+.bodyContacto{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "seccionFormulario"
+    "asideContacto";
+}
+.asideContacto{
+    grid-area: asideContacto;
+    position: sticky;
+    top: 0px;
+    align-self:flex-start;
+}
 .seccion-recetas {
     display: flex;
     justify-content: space-around;
@@ -196,6 +209,8 @@ header li {
 .seccion-formulario {
     display: flex;
     justify-content: center;
+    align-items: center;
+    grid-area: seccionFormulario;
 }
 
 .formulario {
@@ -489,8 +504,16 @@ h2 {
 }
 
 @media only screen and (min-width: 660px) {
-    .bodyInicio{
+    .bodyContacto,bodyInicio{
+        display: grid;
+        grid-template-columns: 1fr;
         grid-template-columns: 60% 40%;
+    }
+    .bodyContacto{
+        grid-template-areas: 
+        "seccionFormulario asideContacto";
+    }
+    .bodyInicio{
         grid-template-areas: 
         "seccionRecetas asideInicio";
     }
@@ -518,11 +541,6 @@ h2 {
     .ingredientes {
         width: 50%;
         padding: 10px;
-    }
-
-    .seccion-formulario {
-        display: flex;
-        align-items: center;
     }
 
 
