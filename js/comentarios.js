@@ -12,7 +12,6 @@ async function recibirComentarios() {
         json.forEach(comentario => {
             let { id, usuario, fecha, comentario: textoComentario } = comentario;
 
-            // Crear elementos HTML para el comentario y los botones de editar y eliminar
             let li = document.createElement('li');
             li.classList.add('comentarioLi');
             li.innerHTML = `
@@ -24,7 +23,6 @@ async function recibirComentarios() {
             `;
             lista.appendChild(li);
 
-            // Agregar eventos a los botones de editar y eliminar
             li.querySelector('.btn-borrar').addEventListener('click', borrarComentario);
             li.querySelector('.btn-editar').addEventListener('click', editarComentario);
         });
@@ -42,7 +40,7 @@ async function borrarComentario(event) {
         });
         if (respuesta.status === 200) {
             document.querySelector("#mensaje").innerHTML = "Comentario Eliminado.";
-            recibirComentarios(); // Recargar los comentarios después de borrar uno
+            recibirComentarios();
         }
 
     } catch (error) {
@@ -70,7 +68,7 @@ async function editarComentario(event) {
         });
         if (respuesta.status === 200) {
             document.querySelector("#mensaje").innerHTML = "Comentario Editado.";
-            recibirComentarios(); // Recargar los comentarios después de editar uno
+            recibirComentarios();
         }
 
     } catch (error) {
@@ -98,13 +96,10 @@ async function subirComentario(e) {
         });
         if (respuesta.status === 201) {
             document.querySelector("#mensaje").innerHTML = "Comentario Creado.";
-            recibirComentarios(); // Recargar los comentarios después de crear uno
+            recibirComentarios();
         }
 
     } catch (error) {
         console.log(error);
     }
 }
-
-document.querySelector("#btn-publicar").addEventListener("click", subirComentario);
-recibirComentarios();
