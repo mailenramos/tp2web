@@ -261,37 +261,69 @@ header li {
     justify-content: center;
     align-items: center;
     grid-area: seccionFormulario;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.seccion-formulario h2 {
+    font-size: 1.8rem;
+    color: #9633a8;
+    margin-bottom: 20px;
 }
 
 .formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 60%;
-    padding: 10px 0;
-    margin: 10px 0;
-    box-shadow: 0 0 2px 2px grey;
-    text-align: center;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.formulario input {
-    width: 80%;
+.formulario label {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 5px;
+    align-self: flex-start;
+}
+
+.formulario input, 
+.formulario select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    box-sizing: border-box;
 }
 
 #boton-formulario {
-    margin: 5px 0;
-    border-radius: 10px;
-    height: 30px;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9633a8;
     color: white;
-    width: 35%;
+    font-size: 1rem;
     font-weight: bold;
-    background-color: rgb(255, 103, 242);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#boton-formulario:hover {
+    background-color: #7b2881;
 }
 
 .formulario h1 {
     font-size: 1.5rem;
-    margin: 4px;
-    color: rgb(103, 102, 102);
+    color: #555;
+    margin-bottom: 20px;
 }
 
 .captcha {
@@ -302,9 +334,14 @@ header li {
 h2.captcha {
     margin: 10px 0;
 }
+.divresultado {
+    margin-top: 20px;
+    font-size: 1rem;
+    color: #9633a8;
+}
 
-select {
-    margin-top: 10px;
+.divcaptcha {
+    margin: 15px 0;
 }
 
 input {
@@ -654,6 +691,10 @@ h2 {
         margin: 0 15px;
         cursor: pointer;
     }
+
+    .formulario {
+        width: 60%;
+    }
 }
     
 
@@ -680,6 +721,9 @@ h2 {
     .route {
         padding: 10px;
         border-bottom: 1px solid #ddd;
+    }
+    .formulario {
+        width: 90%;
     }
 }
 
