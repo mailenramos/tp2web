@@ -41,6 +41,7 @@ nav {
 }
 .route:hover{
     background-color: #fff;
+    padding: 0px 4px;
 }
 
 
@@ -503,6 +504,7 @@ h2 {
 
 .selected {
     background-color: #fff;
+    padding: 0px 4px;
 }
 
 #editar-form {
