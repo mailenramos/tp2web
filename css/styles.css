@@ -56,6 +56,18 @@ footer {
 .contenedor-nav li {
     margin: 3px;
 }
+.bodyRanking{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    "ranking"
+    "asideRanking"
+    "seccionComentarios";
+}
+
+.asideRanking{
+    grid-area: asideRanking;
+}
 .bodyInicio{
     display: grid;
     grid-template-columns: 1fr;
@@ -63,6 +75,7 @@ footer {
     "seccionRecetas"
     "asideInicio";
 }
+
 .asideInicio{
     grid-area: asideInicio;
     position: sticky;
@@ -268,7 +281,8 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 20px; /* Añadido para espacio interno */
+    padding: 20px;
+    grid-area:ranking;
 }
 
 .ranking table {
@@ -320,6 +334,7 @@ h2 {
 .sectionComentarios {
     background-color: #f4f4f4;
     padding: 20px;
+    grid-area: seccionComentarios;
 }
 
 .comentarios {
@@ -508,6 +523,11 @@ h2 {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-columns: 60% 40%;
+    }
+    .bodyRanking{
+        grid-template-areas: 
+        "ranking asideRanking"
+        "seccionComentarios seccionComentarios";
     }
     .bodyContacto{
         grid-template-areas: 
