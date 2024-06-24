@@ -4,7 +4,7 @@ function select_tab(id) {
 }
 
 async function load_content(id) {
-    console.log(`Cargando contenido de ${id}`);
+
     let container = document.querySelector("#content");
     try {
         let response = await fetch(`paginas/${id}.html`);
@@ -12,7 +12,6 @@ async function load_content(id) {
             let content = await response.text();
             container.innerHTML = content;
 
-            // Inicializa los event listeners después de cargar el contenido
             if (id === "ranking") {
                 initRankingEventListeners();
             }
@@ -47,7 +46,7 @@ window.addEventListener("popstate", (event) => {
     load_content(estadoId);
 });
 
-// Esta función inicializa los event listeners específicos para la página de ranking
+
 function initRankingEventListeners() {
     recibirComentarios();
     document.querySelector("#btn-publicar").addEventListener("click", subirComentario);

@@ -8,7 +8,6 @@ async function recibirComentarios() {
         let respuesta = await fetch(url);
         let json = await respuesta.json();
 
-        console.table(json);
         json.forEach(comentario => {
             let { id, usuario, fecha, comentario: textoComentario } = comentario;
 
