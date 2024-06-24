@@ -9,7 +9,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(217, 48, 186);
+    background-image: linear-gradient(to right, #d4aad4, #e42fcc);
     padding: 10px 15px;
 }
 
