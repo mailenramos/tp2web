@@ -354,6 +354,9 @@ h2 {
     padding: 20px;
     grid-area: seccionComentarios;
 }
+.sectionComentarios h1,h2{
+    text-align: center;
+}
 
 .comentarios {
     margin: 20px auto;
