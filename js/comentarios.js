@@ -95,7 +95,7 @@ async function subirComentario(e) {
             "body": JSON.stringify(comentario)
         });
         if (respuesta.status === 201) {
-            document.querySelector("#mensaje").innerHTML = "Comentario Creado.";
+            document.querySelector("#mensaje").innerHTML = "¡Comentario Creado!";
             recibirComentarios();
         }
 
