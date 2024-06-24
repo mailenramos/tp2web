@@ -16,6 +16,7 @@ body {
 .contenedor-logo {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 .torta-logo {
     width: 50px;
@@ -37,6 +38,9 @@ nav {
 .route {
     margin: 0 15px;
     cursor: pointer;
+}
+.route:hover{
+    background-color: #fff;
 }
 
 
@@ -82,10 +86,12 @@ footer {
         "asideRanking"
         "seccionComentarios";
 }
-
+    
+.asideRanking,.asideContacto,.asideInicio {
+    margin: 5px 5px;
+}
 .asideRanking {
     grid-area: asideRanking;
-    margin: 5px 5px;
 }
 
 .bodyInicio {
@@ -496,7 +502,7 @@ h2 {
 }
 
 .selected {
-    background-color: rgb(169, 233, 241);
+    background-color: #fff;
 }
 
 #editar-form {
