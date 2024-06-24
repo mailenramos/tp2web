@@ -4,8 +4,8 @@ body {
     line-height: 1.6;
     font-size: 16px;
 }
-
-header {
+/*estilos para el nav*/
+#header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -13,20 +13,41 @@ header {
     padding: 10px 15px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    padding-left: 5px;
-}
-
-.logo a {
-    text-decoration: none;
-    color: aliceblue;
-}
-
 .contenedor-logo {
     display: flex;
     justify-content: center;
 }
+.torta-logo {
+    width: 50px;
+    height: 50px;
+}
+/* Estilos para el botón de menú */
+.boton-menu {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para la navegación */
+nav {
+    display: flex;
+}
+
+.route {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+
+.logo a {
+    text-decoration: none;
+    color: #ebe4e4;
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+
 
 aside {
     flex-wrap: wrap;
@@ -44,21 +65,10 @@ footer {
 }
 
 .boton-menu {
-    background-color: blanchedalmond;
-    box-shadow: 2px 2px gray;
-    height: 40px;
-}
-
-.contenedor-nav {
     display: none;
-}
-
-.contenedor-nav.desplegado {
-    display: flex;
-}
-
-.contenedor-nav li {
-    margin: 3px;
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 .bodyRanking {
@@ -152,10 +162,6 @@ img {
     height: auto;
 }
 
-.torta-logo {
-    width: 35px;
-    height: 45px;
-}
 
 .ingredientes {
     margin: 10px;
@@ -286,8 +292,8 @@ select {
 
 input {
     border-radius: 5px;
-    width: 100%; /* Ajuste para evitar desbordamientos en inputs */
-    box-sizing: border-box; /* Ajuste para incluir el padding en el ancho */
+    width: 100%; 
+    box-sizing: border-box; 
 }
 
 label {
@@ -567,10 +573,7 @@ h2 {
             "seccionRecetas asideInicio";
     }
 
-    .contenedor-nav {
-        display: flex;
-        flex-wrap: wrap;
-    }
+ 
 
     .tarjeta {
         flex-direction: column;
@@ -622,4 +625,45 @@ h2 {
     .comentarioLi {
         padding: 10px;
     }
+    .boton-menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+    }
+
+    .route {
+        margin: 0 15px;
+        cursor: pointer;
+    }
 }
+    
+
+@media only screen and (max-width: 659px) {
+    .boton-menu {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #f8f9fa;
+        z-index: 1000;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .route {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+    }
+}
+
+

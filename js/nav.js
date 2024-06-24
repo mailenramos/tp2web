@@ -52,3 +52,12 @@ function initRankingEventListeners() {
     recibirComentarios();
     document.querySelector("#btn-publicar").addEventListener("click", subirComentario);
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+    const botonMenu = document.getElementById('boton-menu');
+    const nav = document.getElementById('root');
+
+    botonMenu.addEventListener('click', function() {
+        nav.classList.toggle('active');
+    });
+});
