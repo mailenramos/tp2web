@@ -1,6 +1,10 @@
-body{
+body {
     margin: 0;
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
 }
+
 header {
     display: flex;
     justify-content: space-between;
@@ -10,7 +14,7 @@ header {
 }
 
 .logo {
-    font-size: 25px;
+    font-size: 1.5rem;
     padding-left: 5px;
 }
 
@@ -31,12 +35,12 @@ aside {
     padding: 10px;
 }
 
-
 footer {
     text-align: center;
     background-color: rgb(51, 51, 51);
     color: white;
     padding: 20px 0;
+    font-size: 1rem;
 }
 
 .boton-menu {
@@ -56,45 +60,50 @@ footer {
 .contenedor-nav li {
     margin: 3px;
 }
-.bodyRanking{
+
+.bodyRanking {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
-    "ranking"
-    "asideRanking"
-    "seccionComentarios";
+        "ranking"
+        "asideRanking"
+        "seccionComentarios";
 }
 
-.asideRanking{
+.asideRanking {
     grid-area: asideRanking;
 }
-.bodyInicio{
+
+.bodyInicio {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
-    "seccionRecetas"
-    "asideInicio";
+        "seccionRecetas"
+        "asideInicio";
 }
 
-.asideInicio{
+.asideInicio {
     grid-area: asideInicio;
     position: sticky;
-    top: 0px;
-    align-self:flex-start;
+    top: 0;
+    align-self: flex-start;
 }
-.bodyContacto{
+
+.bodyContacto {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-areas: 
-    "seccionFormulario"
-    "asideContacto";
+        "seccionFormulario"
+        "asideContacto";
 }
-.asideContacto{
+
+.asideContacto {
     grid-area: asideContacto;
     position: sticky;
-    top: 0px;
-    align-self:flex-start;
+    top: 0;
+    align-self: flex-start;
 }
+
 .seccion-recetas {
     display: flex;
     justify-content: space-around;
@@ -103,6 +112,7 @@ footer {
     padding: 20px;
     grid-area: seccionRecetas;
 }
+
 .tarjeta {
     background-color: rgb(236, 218, 218);
     border: 1px solid black;
@@ -111,6 +121,7 @@ footer {
     border-radius: 10px;
     flex-direction: column;
     align-items: center;
+    font-size: 1rem;
 }
 
 .tarjeta button {
@@ -122,11 +133,13 @@ footer {
     background-color: beige;
     color: white;
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .tarjeta h2 {
     padding: 10px;
     background-color: bisque;
+    font-size: 1.25rem;
 }
 
 .iframe {
@@ -146,6 +159,7 @@ img {
 
 .ingredientes {
     margin: 10px;
+    font-size: 1rem;
 }
 
 li {
@@ -168,12 +182,10 @@ header li {
     border: none;
 }
 
-
-
 .fixed-aside {
     position: sticky;
-    top: 0px;
-    align-self:flex-start;
+    top: 0;
+    align-self: flex-start;
 }
 
 .contenedorPublicidad {
@@ -195,10 +207,11 @@ header li {
     background-color: white;
     color: black;
     border-radius: 5px;
+    font-size: 1.5rem;
 }
 
 .span-publicidad {
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bolder;
     color: red;
 }
@@ -207,11 +220,12 @@ header li {
     font-family: "Poetsen One", sans-serif;
     margin: 0;
     text-decoration: underline;
+    font-size: 2rem;
 }
 
 .boton-publicidad {
     background-color: rgb(57, 185, 6);
-    font-size: 1.5em;
+    font-size: 1.5rem;
     border-radius: 15px;
     color: white;
     font-weight: bolder;
@@ -231,16 +245,18 @@ header li {
     flex-direction: column;
     align-items: center;
     width: 60%;
-    padding: 10px 0px;
+    padding: 10px 0;
     margin: 10px 0;
     box-shadow: 0 0 2px 2px grey;
     text-align: center;
 }
-.formulario input{
+
+.formulario input {
     width: 80%;
 }
+
 #boton-formulario {
-    margin: 5px 0px;
+    margin: 5px 0;
     border-radius: 10px;
     height: 30px;
     color: white;
@@ -250,13 +266,13 @@ header li {
 }
 
 .formulario h1 {
-    font-size: 1.3em;
+    font-size: 1.5rem;
     margin: 4px;
     color: rgb(103, 102, 102);
 }
 
 .captcha {
-    font-size: 25px;
+    font-size: 1.5rem;
     background-color: rgb(235, 235, 101);
 }
 
@@ -276,13 +292,15 @@ input {
 
 label {
     padding: 5px 0;
+    font-size: 1rem;
 }
+
 .ranking {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
-    grid-area:ranking;
+    grid-area: ranking;
 }
 
 .ranking table {
@@ -305,6 +323,7 @@ th {
     background-color: rgb(179, 116, 238);
     color: white;
     padding: 10px;
+    font-size: 1rem;
 }
 
 table, td, tr {
@@ -317,6 +336,7 @@ td, th {
 
 h2 {
     color: rgba(152, 51, 168);
+    font-size: 1.5rem;
 }
 
 .modoOscuro body {
@@ -370,6 +390,7 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 10px;
+    font-size: 1rem;
 }
 
 .comentarios form button {
@@ -378,6 +399,7 @@ h2 {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    font-size: 1rem;
 }
 
 .comentarios form button:hover {
@@ -398,6 +420,7 @@ h2 {
 
 .comentarioLi h4 {
     margin-bottom: 5px;
+    font-size: 1.25rem;
 }
 
 .usuario {
@@ -406,6 +429,7 @@ h2 {
 
 .comentarioTexto {
     color: #333;
+    font-size: 1rem;
 }
 
 .form_comentarios {
@@ -432,8 +456,8 @@ h2 {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
     background-color: #fff;
     box-sizing: border-box; /* Incluir padding en el ancho */
 }
@@ -449,7 +473,7 @@ h2 {
     border: none;
     border-radius: 5px;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -458,7 +482,8 @@ h2 {
 .form_comentarios button:hover {
     background-color: rgb(187, 35, 149);
 }
-.selected{
+
+.selected {
     background-color: rgb(169, 233, 241);
 }
 
@@ -476,6 +501,7 @@ h2 {
     text-align: center;
     color: rgb(217, 48, 186);
     margin-bottom: 10px;
+    font-size: 1.5rem;
 }
 
 #editar-form label {
@@ -492,8 +518,8 @@ h2 {
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
-    font-family: 'Arial', sans-serif;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
     background-color: #fff;
 }
 
@@ -508,7 +534,7 @@ h2 {
     border: none;
     border-radius: 5px;
     color: #fff;
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -519,24 +545,28 @@ h2 {
 }
 
 @media only screen and (min-width: 660px) {
-    .bodyContacto,bodyInicio{
+    .bodyContacto, .bodyInicio {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-columns: 60% 40%;
     }
-    .bodyRanking{
+
+    .bodyRanking {
         grid-template-areas: 
-        "ranking asideRanking"
-        "seccionComentarios seccionComentarios";
+            "ranking asideRanking"
+            "seccionComentarios seccionComentarios";
     }
-    .bodyContacto{
+
+    .bodyContacto {
         grid-template-areas: 
-        "seccionFormulario asideContacto";
+            "seccionFormulario asideContacto";
     }
-    .bodyInicio{
+
+    .bodyInicio {
         grid-template-areas: 
-        "seccionRecetas asideInicio";
+            "seccionRecetas asideInicio";
     }
+
     .contenedor-nav {
         display: flex;
         flex-wrap: wrap;
@@ -546,7 +576,6 @@ h2 {
         flex-direction: column;
         width: 90%;
     }
-
 
     .tarjeta h2 {
         width: 90%;
@@ -561,7 +590,6 @@ h2 {
         width: 50%;
         padding: 10px;
     }
-
 
     .formulario button {
         width: 100%;
