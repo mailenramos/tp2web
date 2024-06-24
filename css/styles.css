@@ -75,6 +75,7 @@ footer {
 
 .asideRanking {
     grid-area: asideRanking;
+    margin: 5px 5px;
 }
 
 .bodyInicio {
@@ -547,11 +548,27 @@ h2 {
 
 @media only screen and (min-width: 660px) {
     .bodyContacto, .bodyInicio, .bodyRanking {
-        display: grid;
-        grid-template-columns: 1fr 300px; /* Ajustar ancho del aside */
-        grid-gap: 20px; /* Espacio entre las columnas */
-    }
+        display: grid;}
 
+    .bodyInicio, bodyContacto{
+        grid-template-columns: 60% 40%;
+    }
+    .bodyInicio {
+        grid-template-areas: 
+        "seccionRecetas asideInicio";
+    }
+    .bodyContacto{
+        grid-template-areas: 
+        "seccionFormulario asideContacto";
+    } 
+
+    .bodyRanking{
+        grid-template-columns: 60% 40%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "ranking asideRanking"
+        "seccionComentarios seccionComentarios";
+    }
     .contenedor-nav {
         display: flex;
         flex-wrap: wrap;
