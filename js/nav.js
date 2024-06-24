@@ -2,10 +2,9 @@ function select_tab(id) {
     document.querySelectorAll(".route").forEach((item) => item.classList.remove("selected"));
     document.querySelector("#" + id).classList.add("selected");
 }
-let contenedorNav = document.querySelector("#indicadorNavMovil");
+
 async function load_content(id) {
     console.log(`Cargando contenido de ${id}`);
-    contenedorNav.innerHTML=id;
     let container = document.querySelector("#content");
     try {
         let response = await fetch(`paginas/${id}.html`);

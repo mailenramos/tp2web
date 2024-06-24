@@ -561,10 +561,6 @@ h2 {
 #editar-form button:hover {
     background-color: rgb(187, 35, 149);
 }
-.indicadorNavMovil{
-    width: auto;
-}
-
 @media only screen and (min-width: 660px) {
     .bodyContacto, .bodyInicio, .bodyRanking {
         display: grid;}
@@ -649,9 +645,6 @@ h2 {
     .route {
         margin: 0 15px;
         cursor: pointer;
-    }
-    .indicadorNavMovil{
-        display: none;
     }
 }
     
