@@ -42,13 +42,12 @@ nav {
     display: flex;
 }
 
-.route {
+.F {
     margin: 0 15px;
     cursor: pointer;
 }
 .route:hover{
     background-color: #fff;
-    padding: 0px 4px;
 }
 
 
@@ -512,7 +511,6 @@ h2 {
 
 .selected {
     background-color: #fff;
-    padding: 0px 4px;
 }
 
 #editar-form {
@@ -570,6 +568,9 @@ h2 {
 
 #editar-form button:hover {
     background-color: rgb(187, 35, 149);
+}
+.indicadorNavMovil{
+    width: auto;
 }
 
 @media only screen and (min-width: 660px) {
@@ -656,6 +657,9 @@ h2 {
     .route {
         margin: 0 15px;
         cursor: pointer;
+    }
+    .indicadorNavMovil{
+        display: none;
     }
 }
     
