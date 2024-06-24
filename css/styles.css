@@ -572,6 +572,25 @@ h2 {
 .indicadorNavMovil{
     width: auto;
 }
+.btn-borrar,
+.btn-editar {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-borrar {
+    color: white;
+    background-color: rgb(248, 85, 85);
+}
+
+.btn-editar {
+    color: white;
+    background-color: rgb(69, 151, 69);
+}
+
 
 @media only screen and (min-width: 660px) {
     .bodyContacto, .bodyInicio, .bodyRanking {
