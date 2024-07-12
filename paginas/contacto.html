@@ -5,24 +5,29 @@
         <form id="formulario" class="formulario">
             <h1>Formulario de contacto</h1>
             
-            <label>Correo Electrónico</label>
-            <input name="email" type="email" value="" required>
+            <label for="email">Correo Electrónico
+                <input name="email" id="email" type="email" value="" required>
+            </label>
             
-            <label>Nombre y Apellido</label>
-            <input name="nombre" type="text" required>
+            <label for="nombre">Nombre y Apellido
+                <input name="nombre" id="nombre" type="text" required>
+            </label>
             
-            <select name="sexo" id="sexo">
-                <option value="masculino">Masculino</option>
-                <option value="Femenino">Femenino</option>
-            </select>
+            <label for="sexo">Sexo
+                <select name="sexo" id="sexo">
+                    <option value="masculino">Masculino</option>
+                    <option value="Femenino">Femenino</option>
+                </select>
+            </label>
             
-            <label>Captcha</label>
-            <input name="captcha" required placeholder="Ingrese el captcha" type="number">
+            <label for="captcha">Captcha
+                <input name="captcha" id="captcha" required placeholder="Ingrese el captcha" type="number">
+            </label>
             
             <div id="divCaptcha" class="divcaptcha"></div>
            
             <button id="boton-formulario">Enviar</button>
-       
+        
             <div class="divresultado" id="divresultado"></div>
         </form>
     </section>
